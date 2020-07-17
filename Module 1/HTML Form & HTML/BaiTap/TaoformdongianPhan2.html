@@ -5,25 +5,26 @@
     <title>Taoformdongian</title>
     <style>
         body{background-color: #FFFDA9}
+        .aa {position: fixed; left: 150px}
     </style>
 </head>
 <body>
 <form>
     <h1 style="background-color:#D4FDD6; color: blue"> ĐĂNG KÝ HỌC VIÊN</h1>
 <label style="color: blue"> Họ Và Tên</label>
-<input style="margin-left: 5%" type="text" name="name"> <br> <br>
+<input type="text" name="name" class="aa"> <br> <br>
     <label style="color: blue"> Ngày</label>
-    <input style="margin-left: 5%" type="text" name="ngay sinh"> <br> <br>
+    <input type="text" name="ngay sinh" class="aa"> <br> <br>
 
     <label style="color: blue"> Giới Tính</label>
-    <input style="margin-left: 5%" type="radio" name="ngay sinh"> Nam
+    <input type="radio" name="ngay sinh"> Nam
     <input type="radio" name="ngay sinh"> Nữ <br> <br>
 
     <label style="color: blue"> Địa Chỉ</label>
-    <textarea cols="30" rows="4" style="margin-left: 5%"></textarea> <br> <br>
+    <textarea cols="30" rows="4" class="aa"></textarea> <br> <br>
 
     <label style="color: blue"> Lớp</label>
-<select style="margin-left: 5%";name="lớp">
+<select name="lop" class="aa">
     <option value="1"> Lớp 1</option>
     <option value="2"> Lớp 2</option>
     <option value="3"> Lớp 3</option>
@@ -31,10 +32,10 @@
     <option value="5"> Lớp 5</option>
 </select> <br> <br>
     <label style="color: blue">Email</label>
-    <input style="margin-left: 5%" type="text" name="email"> <br> <br>
+    <input type="text" name="email" class="aa"> <br> <br>
 
     <label style="color: blue"> Điện Thoại</label>
-    <input style="margin-left: 5%" type="text" name="phone"> <br> <br>
+    <input stype="text" name="phone" class="aa"> <br> <br>
 
     <input type="submit" Value="Đăng Ký">
     <input type="reset" value="Nhập Lại">
