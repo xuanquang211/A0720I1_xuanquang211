@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinh</title>
+</head>
+<body>
+<h1>Calculator</h1> <br>
+<input type="text" id="number1">
+<input type="text" id="number2">
+<button onclick="calculate('+')">Cong</button>
+<button onclick="calculate('-')">Tru</button>
+<button onclick="calculate('*')">Nhan</button>
+<button onclick="calculate('/')">Chia</button>
+<script>
+    let number1 = document.getElementById("number1");
+    let number2 = document.getElementById("number2");
+    let result = 0;
+    function calculate(operator) {
+        switch (operator) {
+            case '+' : {result = parseFloat(number1.value) + parseFloat(number2.value)} break;
+            case '-' : {result = number1.value - number2.value} break;
+            case '*' : {result = number1.value * number2.value} break;
+            case '/' : {result = number1.value / number2.value} break;
+
+        }
+        alert(result)
+    }
+
+
+</script>
+</body>
+</html>

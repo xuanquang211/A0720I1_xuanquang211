@@ -2,22 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Doitien</title>
 </head>
 <body>
-<form>
-    <label for="SoTien">Amount</label>
-    <label for="tiente1">From Currency</label>
-    <label>To Currency</label><br>
-    <input type="number" id="SoTien">
-    <select id="tiente1">
-<option>VND</option>
+<label>Amount</label>
+<label>From Currency</label>
+<label>To Currency</label> <br/>
+    <input type="text" id="money">
+    <select id="FromCurrency">
         <option>USD</option>
+        <option>VND</option>
     </select>
-<select>
+    <select id="ToCurrency">
+        <option>USD</option>
+        <option>VND</option>
+    </select>
+    <button onclick="convertmoney()">Convert</button>
+<script>
+    function convertmoney() {
+    let result = 0;
+    let money = document.getElementById("money");
+    let FromCurrency = document.getElementById("FromCurrency");
+    let ToCurrency = document.getElementById("ToCurrency");
+    if (isNaN(money.value) || money.value < 0)
+    {result = "ban nhap so tien khong dung";}
+    else
+        {
 
+            if (FromCurrency.value === "USD" && ToCurrency.value === "VND") {
+                result = money.value * 23000 + "VND";
+            }
+        else
+            if (FromCurrency.value === "VND" && ToCurrency.value === "USD") {
+                result = money.value / 23000 + "USD";
+            }
+        else
+            {
+                result = "moi ban nhap lai"
+            }
+        }
+        document.write("So Tien La" + " " +result);
+    }
 
-</select>
-</form>
+</script>
 </body>
 </html>

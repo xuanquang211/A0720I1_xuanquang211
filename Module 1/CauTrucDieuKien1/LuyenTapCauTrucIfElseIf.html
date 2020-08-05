@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IfElseIf</title>
+</head>
+<body>
+<script>
+    let username = prompt("username?");
+    if (username == 'admin') {
+        let password = prompt('password?');
+        if (password == 'themaster') {document.write('Welcome')}
+            else if (password =='null') {document.write('Canceled')}
+            else {document.write('Wrong password')}
+    }
+    else if (username == 'null') {document.write('canceled')}
+    else {document.write("i don't know you")}
+
+
+
+</script>
+</body>
+</html>
