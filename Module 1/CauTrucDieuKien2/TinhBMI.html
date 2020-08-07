@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<script>
+    let weight = (prompt('Moi ban nhap can nang theo kg'));
+    let height = (prompt('Moi ban nhap chieu cao theo cm'));
+    let BMI = (weight/height/height);
+    var interpretation;
+    if (BMI.value < 18.5) {
+        interpretation = 'UnderWeight';
+    }
+    else if (BMI.value < 25) {
+        interpretation ='Normal';
+    }
+    else if (BMI.value <30) {interpretation = 'OverWeight';}
+    else {interpretation = 'Obese';};
+    document.writeln('BMI =' + BMI + '<br>')
+    document.writeln(interpretation)
+
+</script>
+</body>
+</html>

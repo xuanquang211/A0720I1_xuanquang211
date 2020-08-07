@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BanPhim</title>
+</head>
+<body>
+<form>
+<img src="nobita.png" id="nobita" style="position:absolute;left:0; top:0;" height="100" width="80">
+</form>
+<script>
+    let imgnobita = document.getElementById("nobita");
+    function key(evt) {
+        switch (evt.keyCode) {
+        case 37:
+            imgnobita.style.left = parseInt(imgnobita.style.left) - 5 + 'px';
+        break;
+        case 39:
+            imgnobita.style.left = parseInt(imgnobita.style.left) + 5 + 'px';
+        break;
+        case 38:
+            imgnobita.style.top = parseInt(imgnobita.style.top) - 5 + 'px';
+        break;
+        case 40:
+            imgnobita.style.top = parseInt(imgnobita.style.top) + 5 + 'px';
+        break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', key);
+    }
+    onload=docReady();
+
+</script>
+</body>
+</html>
