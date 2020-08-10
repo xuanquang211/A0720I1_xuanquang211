@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input_value">
+<input type="button" onclick="add_value()" value="ADD">
+<input type="button" onclick="display_value()" value="DISPLAY">
+<hr>
+<div id="result"></div>
+
+<script>
+    let element = Array ();
+    function add_value() {
+        let input_value = document.getElementById("input_value").value;
+        element.push(input_value);
+        alert("Ban vua nhap so " + input_value)
+    }
+    function display_value() {
+        let display = "<hr/>";
+        for (let i = 0; i < element.length; i++) {
+            display += "Element " + i + " = " + element[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = display;
+    }
+
+</script>
+
+
+</body>
+</html>
