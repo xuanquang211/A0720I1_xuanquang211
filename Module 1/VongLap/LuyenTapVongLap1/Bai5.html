@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = 1;
+    let count = 1;
+    let result = 0;
+    let total = 0;
+    while (count<=20) {
+        result = result + i;
+        i = result - i;
+        total = result + total;
+        count++;
+    }
+    document.write("Tong 20 so pibonaci dau tien la: " + total);
+
+
+</script>
+</body>
+</html>

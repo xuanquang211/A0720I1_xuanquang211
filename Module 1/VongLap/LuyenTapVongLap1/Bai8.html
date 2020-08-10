@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="play()">Choi</button>
+<script>
+
+    function play() {
+        let count = 1;
+        while (count <= 3) {
+            let number1 = parseInt(prompt("Nhap so nho nhat cua khoang"));
+            let number2 = parseInt(prompt("Nhap so lon nhat cua khoang"));
+            let num = parseInt(prompt("Moi nhap so ban chon trong khoang"));
+            let i = Math.floor(Math.random() * (number2 - number1) + number1);
+            if (i === num) {
+                alert("Chuc mung ban, so ban chon la " + i);
+                break
+            } else {
+                alert("Xin chia buon, so dung la " + i)
+            }
+            count++;
+        }
+    }
+
+
+</script>
+</body>
+</html>

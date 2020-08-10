@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So Nguyen</title>
+</head>
+<body>
+<script>
+
+function main() {
+let result = "";
+let count = 1;
+let primeWantDisplay = parseInt(prompt("Nhap so luong can hien thi"));
+let number = 2;
+while (count <= primeWantDisplay) {
+    if (checkSN(number)) {
+        result += number + " la mot so nguyen to" + "<br>";
+        count++;
+    }
+    number++;
+}
+document.write(result)
+}
+
+
+function checkSN(temp) {
+if (temp < 2) { return false;}
+for (let i = 2; i < temp - 1; i++) {
+    if (temp%i == 0) {
+        return false}
+}
+return true;
+}
+
+main()
+</script>
+</body>
+</html>
