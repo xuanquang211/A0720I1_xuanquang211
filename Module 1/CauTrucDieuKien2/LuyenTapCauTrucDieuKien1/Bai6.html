@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let targ = prompt("Moi ban nhap target cong ty giao");
+    let saleout = prompt("Moi ban nhap doanh so ban duoc");
+    let achiv = saleout/targ*100;
+    achiv = achiv.toFixed(2);
+
+        switch (true) {
+        case (achiv >= 90 && achiv <= 100): alert("Hoa hong cua ban la " + (achiv - 90)*25/10 + " trieu");
+        break;
+        case (achiv > 100 && achiv <=130): alert("Hoa hong cua ban la " + (25 + (achiv-100)*25/30) + " trieu")
+        break;
+        case (achiv > 130): alert("Hoa hong cua ban la 50 trieu")
+        break;
+        default: alert("Ban khong duoc nhan thuong")
+                break;
+        }
+</script>
+</body>
+</html>

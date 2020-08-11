@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap diem trung binh cac bai kiem tra")
+    let b = prompt("Nhap diem thi giưa ky")
+    let c = prompt("Nhap diem thi cuoi ky")
+    let avg = a/3 + b/3 + c/3 ;
+    switch (true) {
+        case (avg >= 8 && avg <=10): document.write("Ban la hoc sinh gioi, so diem cua ban la " + avg);
+        break;
+        case (avg < 8 && avg >= 6.5): document.write("Ban la hoc sinh kha, so diem cua ban la " + avg);
+        break;
+        case (avg < 6.5 && avg >= 5): document.write("Ban la hoc sinh trung binh, so diem cua ban la " + avg);
+        break;
+        case (avg < 5 && avg >= 0): document.write("Ban la hoc sinh yeu, so diem cua ban la " + avg);
+        break;
+        default: alert("Ban da nhap sai, moi ban nhap lai");
+        break;
+
+
+    }
+</script>
+</body>
+</html>
