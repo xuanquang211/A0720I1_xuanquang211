@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function checkZodiac() {
+    let nameStar = prompt("Moi ban nhap ten ngoi sao");
+    if (arr1.indexOf(nameStar) !== -1) {
+        alert(arr1[arr1.indexOf(nameStar)] + " " + arr2[arr1.indexOf(nameStar)])
+    } else {alert("ban nhap sai ten ngoi sao"); checkZodiac()}
+    }
+    checkZodiac()
+</script>
+</body>
+</html>
