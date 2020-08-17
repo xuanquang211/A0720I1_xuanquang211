@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let person1 = true
+    let arrCaro = new Array()
+    function innit() {
+        for (let i = 0; i < 5; i++) {
+            arrCaro[i] = new Array()
+            for (let j = 0; j < 5 ; j++) {
+                arrCaro[i][j] = ""
+            }
+        }
+    }
+    function displayCaro() {
+        let result = "<table border='1' cellpadding='15'>";
+        for (let i = 0; i < 5; i++) {
+            result += "<tr>";
+            for (let j = 0; j < 5 ; j++) {
+                result += "<td onclick='changeCaro("+i+","+j+")'>" + arrCaro[i][j] +"</td>"
+            };
+            result += "</tr>"
+        }
+        result += "</table>";
+        document.writeln(result)
+    }
+
+
+    function changeCaro(x,y) {
+        if (arrCaro[x][y] === "X" || arrCaro[x][y] === "O") {}
+        else
+        {
+            if (person1 === true) {
+                arrCaro[x][y] = "X";
+                person1 = false;
+                checkWinner("X")
+            } else {
+                arrCaro[x][y] = "O";
+                person1 = true;
+                checkWinner("O")
+            }
+            document.body.innerHTML = ""
+            displayCaro()
+        }
+    }
+    function checkWinner(temp) {
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++)
+                if ((arrCaro[i][j] === temp && arrCaro[i][j + 1] === temp && arrCaro[i][j + 2] === temp)
+                || (arrCaro[i][j] === temp && arrCaro[i + 1][j] === temp && arrCaro[i + 2][j] === temp)
+                || (arrCaro[i][j] === temp && arrCaro[i + 1][j + 1] === temp && arrCaro[i + 2][j + 2] === temp)
+                || (arrCaro[i][j] === temp && arrCaro[i + 1][j-1] === temp && arrCaro[i + 2][j-2] === temp)
+                ) {
+                    alert(temp + " chien thang");
+                    person1 = true;
+                    innit();
+                    displayCaro()
+                }
+        }
+    }
+
+    innit()
+    displayCaro()
+
+</script>
+</body>
+</html>

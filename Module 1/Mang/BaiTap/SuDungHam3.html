@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let typer = prompt("Moi ban nhap tu");
+    let upper = "QWERTYUIOPASDFGHJKLZXCVBNM";
+    let lower = "qwertyuiopasdfghjklzxcvbnm";
+    let result = new Array()
+    for (let check = 0; check < typer.length; check++){
+        if (upper.indexOf(typer[check]) !== -1) {
+          result.push(typer[check].toLowerCase())
+        }
+        else if (lower.indexOf(typer[check]) !== -1) {
+            result.push(typer[check].toUpperCase())
+        }
+        else {result.push(typer[check])}
+    }
+    document.writeln(result.join(""))
+
+</script>
+</body>
+</html>
