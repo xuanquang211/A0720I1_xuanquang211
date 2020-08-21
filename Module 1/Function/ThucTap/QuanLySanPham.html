@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button {background-color: yellowgreen}
+
+    </style>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input type="text" id="newProduct">
+<button onclick="addProduct()">Add</button> <br>
+<h2>Display All Product</h2> <br>
+<h3>Product Name</h3>
+<div id="displayProduct"></div>
+<script>
+    function displayProduct() {
+    let result = "<table>";
+    for (let i = 0; i < arrProduct.length; i++) {
+        result = result + "<tr>" + "<td>" + arrProduct[i] + "</td>" + "<td><button onclick='editProduct("+i+")'>Edit</button></td>" + "<td><button onclick='deleteProduct("+i+")'>Delete</button></td>" + "</tr>"
+    }
+    result = result + "</table>";
+    document.getElementById("displayProduct").innerHTML = result;
+    }
+
+    let arrProduct = new Array();
+    function addProduct() {
+    let newProduct = document.getElementById("newProduct");
+    newPro = newProduct.value
+        arrProduct.push(newPro)
+    displayProduct()
+    }
+
+    function editProduct(temp) {
+        let edit = prompt("Moi ban nhap thong tin can chinh sua");
+        arrProduct[temp] = edit;
+        displayProduct()
+    }
+    function deleteProduct(temp) {
+        arrProduct.splice(temp,1);
+        displayProduct()
+    }
+
+
+
+</script>
+</body>
+</html>

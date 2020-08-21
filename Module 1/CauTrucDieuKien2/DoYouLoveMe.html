@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Do You Love Me?</h1>
+<button onclick="clickYes()">Yes</button>
+<button id="no" onmouseover="touchNo()" style="position: absolute; left: 220px">No</button>
+<script>
+    let btNo = document.getElementById("no");
+
+    function clickYes() {
+    alert("I Love You Too")
+    }
+    function touchNo() {
+    btNo.style.top = Math.round(Math.random()*400) + 'px';
+    btNo.style.left = Math.round(Math.random()*400) + 'px';
+    }
+
+</script>
+</body>
+</html>
