@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temperature = function(valueC) {
+        this.valueC = valueC;
+        this.valueF = function () {
+        return 9/5*valueC + 32
+        };
+        this.valueK = function () {
+        return valueC + 273
+        }
+    }
+    let Temperature = new temperature(25);
+    let valueF = Temperature.valueF();
+    let valueK = Temperature.valueK();
+    alert("Do F: " + valueF + "; Do K: " + valueK)
+</script>
+</body>
+</html>
