@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        alert("Moi ban nhap phuong trinh bat hai dang Ax2 + Bx + C = 0")
+        let A = parseInt(prompt("Moi ban nhap A"));
+        let B = parseInt(prompt("Moi ban nhap B"));
+        let C = parseInt(prompt("Moi ban nhap C"));
+        let delta = (B*B - 4*A*C)
+        if (delta < 0) {alert("Phuong trinh vo nghiem")}
+        else if (delta === 0) {alert("Phuong trinh co nghiem la " + (0 - B)/(2*A))}
+        else {alert("Phuong trinh co hai nghiem la X1 = " + ((0 - B) + Math.sqrt(delta))/(2*A) + " va X2 = " + ((0 - B) - Math.sqrt(delta))/(2*A))}
+    </script>
+</body>
+</html>

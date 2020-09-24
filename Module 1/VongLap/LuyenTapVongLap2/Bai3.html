@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i <= 5; i++) {
+        let row = " ";
+        for (let j = 1; j<=5; j++) {
+            if ((i - j) >= 0) {
+                row = row + "*"
+            }
+            else {row = row + " "}
+        }
+        document.write(row + "<br>")
+    }
+    for (let i = 1; i <= 5; i++) {
+        let row = " ";
+        for (let j = 1; j<=5; j++) {
+            if ((i + j) > 6) {
+                row = row + "*"
+            }
+            else {row = row + " "}
+        }
+        document.writeln(row + "<br>")
+    }
+    document.write("     *")
+</script>
+</body>
+</html>

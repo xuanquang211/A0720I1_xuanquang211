@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="numberToAdd">
+<button onclick="addNumberToArray()">ADD</button>
+<br>
+<br>
+<div id="displayArray"></div>
+<div id="lengthOfArray"></div>
+<div id="averageOfArray"></div>
+<script>
+    let arr = new Array();
+    let average = 0;
+    function addNumberToArray() {
+        let numberToAdd = document.getElementById("numberToAdd").value;
+        if (arr.length < 50) {
+            arr.push(numberToAdd);
+            averageOfArray()
+            displayArray()
+        }
+        else {
+            displayArray() }
+    }
+    function displayArray() {
+        document.getElementById("displayArray").innerHTML = "Array = [" + arr + "]";
+        document.getElementById("lengthOfArray").innerHTML= "So phan tu da nhap la :" + arr.length;
+        document.getElementById("averageOfArray").innerHTML= "Trung binh cong so chan vi tri le: " + average;
+    }
+    function averageOfArray() {
+        average = 0;
+        let arr1 = new Array();
+        for (let i = 0; i < arr.length; i = i + 2) {
+            if (arr[i]%2 !== 0) {
+                arr1.push(arr[i])
+            }
+        }
+        for (let j = 0; j < arr1.length; j++) {
+            average = average + (arr1[j]/arr1.length)
+        }
+    }
+</script>
+</body>
+</html>

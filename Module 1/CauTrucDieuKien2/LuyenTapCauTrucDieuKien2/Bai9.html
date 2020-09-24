@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("moi nhap canh thu nhat cua tam giac"))
+        let b = parseInt(prompt("moi nhap canh thu hai cua tam giac"))
+        let c = parseInt(prompt("moi nhap canh thu ba cua tam giac"))
+        if (a <= 0 || b <= 0 || c <= 0) {
+            alert("Moi ban nhap cac canh lon hon 0")
+        }
+        else if (
+            ((a + b) > c) &&
+            ((a + c) > b) &&
+            ((c + b) > a)
+        ) {alert("Day la mot tam giac")}
+        else {alert("Day khong phai tam giac")}
+    </script>
+</body>
+</html>

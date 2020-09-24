@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = prompt("Moi ban nhap so dau tien: ")
+    let number2 = prompt("Moi ban nhap so thu hai: ")
+    if (number1 > 0 && number2 > 0) {checkHaiSoThanThiet()}
+    else {alert("Hai so ban nhap chua dung")
+    }
+    function checkHaiSoThanThiet() {
+        let arr1 = new Array()
+        let arr2 = new Array()
+        let total1 = 0;
+        let total2 = 0;
+        for (let i = 1; i < number1 ; i++) {
+            if (number1%i == 0) {
+                arr1.push(i)
+            }
+        }
+        for (let i = 1; i < number2 ; i++) {
+            if (number2%i == 0) {
+                arr2.push(i)
+            }
+        }
+        for (let i = 0; i < arr1.length; i++) {
+            total1 = total1 + arr1[i]
+        }
+        for (let i = 0; i < arr2.length; i++) {
+            total2 = total2 + arr2[i]
+        }
+        if (total1 == number2 && total2 == number1) {alert("True")}
+        else {alert("False")}
+    }
+</script>
+</body>
+</html>

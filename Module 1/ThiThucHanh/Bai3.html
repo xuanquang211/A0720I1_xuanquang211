@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Quan Ly Sach</h1>
+<div id="displayProduct"></div>
+<br>
+<button onclick="themSachDaco()">Them Sach Da Co</button>
+<button onclick="themSachMoi()">Them Sach Moi</button>
+<button onclick="muonSach()">Muon Sach</button>
+<button onclick="hienThiSachNhieuNhat()">Hien Thi Sach Nhieu Nhat</button>
+<script>
+    function displayProduct() {
+        let result = "<table border='1'>" + "<tr>" +
+                "<td>Ma So Sach</td>" +
+                "<td>Ten Sach</td>" +
+                "<td>Nam Xuat Ban</td>" +
+                "<td>So Quyen</td>" +
+                "<td>Tinh Trang</td>" +
+            + "</tr>";
+        for (let i = 0; i < arrProduct.length; i++) {
+        result = result + "<tr>" + "<td>" + arrProduct[i][0] + "</td>"
+            + "<td>" + arrProduct[i][1] + "</td>"
+            + "<td>" + arrProduct[i][2] + "</td>"
+            + "<td>" + arrProduct[i][3] + "</td>"
+            + "<td>" + arrProduct[i][4] + "</td>" + "</tr>>"
+        }
+        result = result + "</table>";
+        document.getElementById("displayProduct").innerHTML = result
+    }
+    let arrProduct = new Array()
+    function themSachMoi() {
+        let newMaso = prompt("Nhap Ma So")
+        let newTenSach = prompt("Nhap Ten Sach")
+        let newNamXB = prompt("Nhap Nam Xuat Ban")
+        let newSoSach = prompt("Nhap So Luong")
+        let arr = [newMaso,newTenSach,newNamXB,newSoSach,"True"]
+        arrProduct.push(arr)
+        displayProduct()
+    }
+    displayProduct()
+</script>
+</body>
+</html>
