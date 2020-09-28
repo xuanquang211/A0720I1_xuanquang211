@@ -21,7 +21,7 @@ public class convertNumberToString {
     public static final String[] ten = {
             "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"
     };
-    public static String convert(final int n) {
+    public static String convert(int n) {
         if (n < 20) {
             return unit[n];
         }
